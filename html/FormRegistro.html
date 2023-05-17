@@ -6,19 +6,14 @@
 
   <title>LOGISTICA</title>
 
-  <style>
-    body {
-      font-family: "Times New Roman", Times, serif;
-    }
-  </style>
-</head>
+  </head>
 
 <body>
   <form action="./Script_PHP/registrar.php" method="POST" name="FormDireccion" target="_blank">
     <fieldset>
       <legend>DIRECCION DE ENVIO</legend>
       Calle Principal <br>
-      <input type="text" name="txtPrincipal" value="">
+      <input type="text" name="txtPrincipal" autofocus value="">
       <br><br>
       Transversal<br>
       <input type="text" name="txtTransversal" value="">  
@@ -29,23 +24,12 @@
       Cantones:
       <select  name="cmbCantones">
         <optgroup label="PICHINCHA">
-          <option value="Q">Quito</option>
-          <option value="M">Mejia</option>
-          <option value="R">Rumiñahui</option>
+          <option value="Quito">Quito</option>
+          <option value="Mejia">Mejia</option>
+          <option value="Ruminahui">Rumiñahui</option>
         </optgroup>
          
-        <optgroup label="GUAYAS">
-          <option value="G">Guayaquil</option>
-          <option value="S">Salinas</option>
-          <option value="SE">Santa Elena</option>
-        </optgroup>
-
-        <optgroup label="AZUAY">
-          <option value="C">Cuenca</option>
-          <option value="N">Nabón</option>
-          <option value="P">Paute</option>
-        </optgroup>
-      </select>
+        </select>
       <br><br>
       <input type="submit" name="SubmitDireccion" id="Submitb" value="ENVIAR DATOS" disabled>
     </fieldset>
@@ -65,30 +49,9 @@
     </fieldset>
   </form>
   <br><br>
-  <a href="index.html">Regresar</a>
     
-  <script>
-    var objeto;
-    var check;
-    function ActivarB() { 
-      objeto = document.getElementById("Submitb");
-      check = document.getElementById("Entrega1");
-        if(check.checked == true){
-          objeto.disabled = false; 
-        }else{
-          objeto.disabled = true;
-        }
-    } 
-    function ActivarF() { 
-      objeto = document.getElementById("form1");
-      check = document.getElementById("Entrega2");
-        if(check.checked == true){
-          objeto.style.display = "block"; 
-        }else{
-          objeto.style.display = "none";
-        }
-    }  
-  </script>
+  <script src="../js/formregistro.js"></script>
+
 </body>
 
 </html>
